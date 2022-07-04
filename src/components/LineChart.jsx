@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {Chart, PointElement} from 'chart.js';
 import { Line } from "react-chartjs-2";
 import 'chart.js/auto'
@@ -11,16 +11,16 @@ import {
     Title,
     Tooltip,
     Legend,
-  } from "chart.js";
+} from "chart.js";
   
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-  );
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const LineChart = () => {
   return (
@@ -50,7 +50,7 @@ const LineChart = () => {
             },
             title: {
               display: true,
-              text: 'Chart.js Line Chart',
+              text: 'Đơn vị: Tỷ đồng',
             },
           },
         }}

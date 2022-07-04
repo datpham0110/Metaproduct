@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,19 +7,45 @@
 }
 
 html{
-    font-size: 13px;
+    font-size: 14px;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+
+}
 
 .container{
-    min-width: 100%;
-    height: 100vh;
-    padding: 10rem;
+    max-width: 100%;
+    min-height: 100vh;
     background-color: #fff;
 }
 .section{
     background-color: #fff;
     color: #000;
 }
+.content{
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    max-width: 100%;
+    padding: 0px 5rem;
+    gap: 1.5rem;
 
+    canvas{
+        width: 95% !important;
+        height: 65vh !important;
+        border: 2px solid #e1e1e1;
+        padding: 2rem;
+    }
+}
+
+
+@import "./mixins";
 @import "./components/header";
+@import "./components/title";
+@import "./components/content";
+@import "./components/listproduct";
