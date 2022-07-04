@@ -1,0 +1,36 @@
+.btn-slide {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #fff;
+  border: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.17);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.17);
+}
+.btn-slide:hover {
+  /* background: #fe4536; */
+}
+
+.btn-slide img {
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+img:hover {
+  fill: #fff;
+}
+.prev {
+  top: 50%;
+  left: 100px;
+  transform: translateY(-60%);
+}
+.next {
+  top: 50%;
+  right: 100px;
+  transform: translateY(-60%);
+}

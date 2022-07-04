@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/1997lab.thienlong/static/css/main.efba73e8.css",
+    "main.js": "/1997lab.thienlong/static/js/main.f82b7d56.js",
+    "static/media/sanpham.png": "/1997lab.thienlong/static/media/sanpham.86981d15558a7a6b507a.png",
+    "static/media/brand3.png": "/1997lab.thienlong/static/media/brand3.96f4ba81773a7f8f7d95.png",
+    "static/media/logo.png": "/1997lab.thienlong/static/media/logo.b04d0ae214e5feb80ed0.png",
+    "static/media/iconProfile.svg": "/1997lab.thienlong/static/media/iconProfile.50ff2ffc90fab92059e12c08e42730eb.svg",
+    "static/media/left-arrow.svg": "/1997lab.thienlong/static/media/left-arrow.a0b0ade0dcee1b9da1a690d72fbf5287.svg",
+    "static/media/right-arrow.svg": "/1997lab.thienlong/static/media/right-arrow.1d4560bac39002652812179f4331c67e.svg",
+    "static/media/iconSearch.svg": "/1997lab.thienlong/static/media/iconSearch.7fd8c0dcbc5c064d7db0c6082be43113.svg",
+    "index.html": "/1997lab.thienlong/index.html",
+    "main.efba73e8.css.map": "/1997lab.thienlong/static/css/main.efba73e8.css.map",
+    "main.f82b7d56.js.map": "/1997lab.thienlong/static/js/main.f82b7d56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efba73e8.css",
+    "static/js/main.f82b7d56.js"
+  ]
+}
