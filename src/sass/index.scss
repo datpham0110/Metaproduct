@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 13px;
+}
+
+
+.container{
+    min-width: 100%;
+    height: 100vh;
+    padding: 10rem;
+    background-color: #fff;
+}
+.section{
+    background-color: #fff;
+    color: #000;
+}
+
+@import "./components/header";
