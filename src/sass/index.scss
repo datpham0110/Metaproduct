@@ -43,9 +43,10 @@ a{
     }
 }
 
-
+@import "./variables";
 @import "./mixins";
 @import "./components/header";
 @import "./components/title";
 @import "./components/content";
 @import "./components/listproduct";
+@import "./components/footer";

@@ -7,6 +7,7 @@ import Content from "./components/Content";
 import './sass/index.scss'
 import Title from "./components/Title";
 import ListProduct from "./components/ListProduct";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
         </div>
         <Title title="Danh mục sản phẩm" des=" "/>
         <ListProduct />
+
+        <Footer />
       </div>
     </>
     

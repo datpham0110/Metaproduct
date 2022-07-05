@@ -51,6 +51,79 @@ const LeftSlidebar = () => {
       name: "Bizner"
     }
   ]
+
+  const colors = [
+    {
+      color: "red"
+    },
+    {
+      color: "blue"
+    },
+    {
+      color: "yellow"
+    },
+    {
+      color: "pink"
+    },
+    {
+      color: "white"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    },
+    {
+      color: "black"
+    }
+  ]
+  
   return (
     <div className="leftbar">
         <div className="leftbar__search">
@@ -58,17 +131,32 @@ const LeftSlidebar = () => {
             <AiOutlineSearch />
         </div>
         <div className="leftbar__content">
-          {
-            data.map((item, index) => (
-              <div className="leftbar__content__item" key={index}>
-                <div className="leftbar__content__item__left">
-                    {item.icon}
-                    <span>{item.name}</span>
-                </div>
-                <AiOutlineRight />
-              </div>
-            ))
-          }
+          <div className="leftbar__content__list">
+            {
+              data.map((item, index) => (
+                
+                  <div className="leftbar__content__list__item" key={index}>
+                    <div className="leftbar__content__list__item__left">
+                        <div className="leftbar__content__list__item__left__name">
+                          {item.icon}
+                          <span>{item.name}</span>
+                        </div>
+                        <div className="leftbar__content__list__item__left__icon">
+                          <AiOutlineRight />
+                        </div>
+                        
+                    </div>
+                    <div className="leftbar__content__list__item__right">
+                        <div className="leftbar__content__list__item__right__item">
+                          <span>{item.name}</span>
+                          <AiOutlineRight />
+                        </div>
+                    </div>
+                  </div>
+                
+              ))
+            }
+          </div>
         </div>
         <div className="leftbar__group">
             <div className="leftbar__group__category">
@@ -86,8 +174,14 @@ const LeftSlidebar = () => {
             </div>
             <div className="leftbar__group__colors">
               <h3>MÀU SẮC</h3>
-              <div className="leftbar__group__colors__item">
-
+              <div className="leftbar__group__colors__list">
+              {
+                colors.map((item, index) => (
+                  <div className="leftbar__group__colors__list__item">
+                    <div></div>
+                  </div>
+                ))
+              }
               </div>
             </div>
         </div>
