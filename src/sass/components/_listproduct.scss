@@ -51,6 +51,11 @@
         &__list{
             width: 100%;
             line-height: 3;
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 49%);
+
+            
 
             &__item{
                 display: flex;
@@ -61,36 +66,65 @@
     
                 &__left{
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    gap: 1rem;
-                    width: 50%;
-    
-                    &__name{
-                        display: flex;
-                        gap: 1rem;
-                        align-items: center;
-                    }
+                    flex-direction: column;
 
                     &:hover{
-                        color: #265DB0;
-                        cursor: pointer;
-    
+
                         & ~ div{
                             display: block;
+                        }
+                    }
+
+                    &__info{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 1rem;
+                        width: 100%;
+    
+    
+    
+                        &__name{
+                            display: flex;
+                            gap: 1rem;
+                            align-items: center;
+                        }
+    
+                        &:hover{
+                            color: #265DB0;
+                            cursor: pointer;
+                            background-color: rgba($color: #e1e1e1, $alpha: 0.2);
+    
                         }
                     }
                 }
     
                 &__right{
                     // visibility: hidden;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
                     display: none;
-                    justify-content: flex-end;
-                    align-items: center;
+                    transform: translateX(70px);
+                    cursor: pointer;
 
                     &__item{
                         display: flex;
                         align-items: center;
+                        flex-direction: column;
+
+                        &hover{
+                            color: #265DB0;
+                            cursor: pointer;
+                            background-color: rgba($color: #e1e1e1, $alpha: 0.2);
+                        }
+                        
+                        .content{
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -125,7 +159,8 @@
             &__list{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 0.5rem;
+                gap: 0.75rem;
+                margin-top: 1.5rem;
 
                 &__item{
                     width: 30%;
@@ -138,8 +173,65 @@
                     cursor: pointer;
                     // font-size: 1.5rem;
 
-                    &:checked{
-                        border: 2px solid red;
+                    &:nth-of-type(1){
+                        background-color: red;
+                    }
+                    &:nth-of-type(2){
+                        background-color: blue;
+                    }
+                    &:nth-of-type(3){
+                        background-color: yellow;
+                    }
+                    &:nth-of-type(4){
+                        background-color: green;
+                    }
+                    &:nth-of-type(5){
+                        background-color: pink;
+                    }
+                    &:nth-of-type(6){
+                        background-color: black;
+                    }
+                    &:nth-of-type(7){
+                        background-color: orange;
+                    }
+                    &:nth-of-type(8){
+                        background-color: gray;
+                    }
+                    &:nth-of-type(9){
+                        background-color: blueviolet;
+                    }
+                    &:nth-of-type(10){
+                        background-color: aqua;
+                    }
+                    &:nth-of-type(11){
+                        background-color: cornflowerblue;
+                    }
+                    &:nth-of-type(12){
+                        background-color: darkgreen;
+                    }
+                    &:nth-of-type(13){
+                        background-color: darkcyan;
+                    }
+                    &:nth-of-type(14){
+                        background-color: lightsalmon;
+                    }
+                    &:nth-of-type(15){
+                        background-color: saddlebrown;
+                    }
+                    &:nth-of-type(16){
+                        background-color: sandybrown;
+                    }
+                    &:nth-of-type(17){
+                        background-color: wheat;
+                    }
+                    &:nth-of-type(18){
+                        background-color: darkolivegreen;
+                    }
+                    &:nth-of-type(19){
+                        background-color: darkslateblue;
+                    }
+                    &:nth-of-type(20){
+                        background-color: skyblue;
                     }
 
                     // & ~ div {
@@ -182,12 +274,16 @@
             box-shadow: 1px 2px 0px #D9D9D9;
             border-right: none;
 
+            img{
+                cursor: pointer;
+            }
+
             img:nth-of-type(1){
                 width: 40%;
                 opacity: 0.8;
             }
             img:nth-of-type(2){
-                width: 70%;
+                width: 90%;
             }
 
             p{
@@ -214,9 +310,17 @@
                 border: 1px solid #D9D9D9;
                 border-radius: 0.5rem;
                 box-shadow: 1px 3px 1px rgba($color: #D9D9D9, $alpha: 0.3);
+                padding: 1rem;
+                gap: 1.5rem;
 
                 img{
-                    width: 30%;
+                    width: 25%;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                span{
+                    font-weight: 500;
                 }
             }
 
@@ -226,6 +330,14 @@
                 display: flex;
                 align-items: center;
                 object-fit: cover;
+                // background-color: red;
+
+                &__linechart{
+                    padding: 1.5rem 1rem 1rem 1rem;
+                    height: 75%;
+                    display: flex;
+                    align-items: center;
+                }
 
                 canvas{
                     border-right: 1px solid #D9D9D9;

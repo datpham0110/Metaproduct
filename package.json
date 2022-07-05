@@ -7,6 +7,8 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "chart.js": "^3.8.0",
+    "chartjs-plugin-datalabels": "^2.0.0",
+    "chartjs-plugin-outlabels3": "^1.1.0",
     "gh-pages": "^3.2.3",
     "node-sass": "^7.0.1",
     "react": "^18.0.0",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import LineChart from "./components/LineChart";
 import Header from "./components/Header";
 import ColumnChart from "./components/ColumnChart";
@@ -18,12 +18,17 @@ function App() {
       <div className="container">
         <Title title="Thống kê theo sản phẩm" des="Thống kê doanh thu, tốc độ tăng trưởng các sản phẩm theo từng năm"/>
         <div className="content">
-          <ColumnChart />
-          {/* <LineChart /> */}
-          <LineChart />
-          {/* <LineChart /> */}
-          <CircleChart />
-          <Content />
+          <div className="content1">
+            <ColumnChart />
+            {/* <LineChart /> */}
+            <LineChart />
+            {/* <LineChart /> */}
+            
+          </div>
+          <div className="content2">
+            <CircleChart />
+            <Content />
+          </div>
         </div>
         <Title title="Danh mục sản phẩm" des=" "/>
         <ListProduct />

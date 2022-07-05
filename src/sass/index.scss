@@ -19,6 +19,10 @@ a{
 
 }
 
+canvas{
+    cursor: pointer;
+}
+
 .container{
     max-width: 100%;
     min-height: 100vh;
@@ -29,15 +33,35 @@ a{
     color: #000;
 }
 .content{
+    width: 100%;
+    height: 100%;
+}
+.content1{
     display: grid;
-    grid-template-columns: repeat(2, 48%);
+    grid-template-columns: repeat(2, 50%);
     max-width: 100%;
     padding: 0px 5rem;
-    gap: 1.5rem;
+    gap: 2.5rem;
 
     canvas{
         width: 95% !important;
         height: 65vh !important;
+        border: 2px solid #e1e1e1;
+        padding: 2rem;
+    }
+}
+.content2 {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 47.5%);
+    max-width: 100%;
+    padding: 0px 5rem;
+    gap: 2.5rem;
+    margin-top: 15px;
+
+    canvas {
+        width: 100% !important;
+        height: 90% !important;
         border: 2px solid #e1e1e1;
         padding: 2rem;
     }
