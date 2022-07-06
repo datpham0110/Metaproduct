@@ -1,32 +1,159 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo.png";
-import { Pie } from "react-chartjs-2";
-import { Line } from "react-chartjs-2";
 import imgproduct from "../images/1.jpg";
 import logotitle from "../images/NewProduct_1.png";
-import ChartDataLabels from "chartjs-plugin-datalabels";
-
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartDataLabels
-);
+import Chart from "react-apexcharts";
 
 const ListProductContent = () => {
+  const label = ["Miền Bắc", "Miền Trung", " Miền Nam"];
+
+  // Custom setting and dâta for chart Tổng số lượng bán
+  const [totalApex, setTotalApex] = useState({
+    series: [51, 33, 16],
+    options: {
+      colors: [
+        "rgba(255, 99, 132, 0.6)",
+        "rgba(54, 162, 235, 0.6)",
+        "rgba(255, 206, 86, 0.6)",
+      ],
+      dataLabels: {
+        textAnchor: "start",
+        offsetX: 20,
+        offsetY: 220,
+        style: {
+          fontSize: "11px",
+          fontFamily: "Helvetica, Arial, sans-serif",
+          fontWeight: "400",
+          // colors: ['#000']
+        },
+      },
+      chart: {
+        width: 380,
+        type: "pie",
+        toolbar: {
+          show: false,
+        },
+        events: {
+          dataPointMouseEnter: function (event) {
+            event.path[0].style.cursor = "pointer";
+          },
+        },
+      },
+      legend: {
+        position: "bottom",
+      },
+      labels: label,
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  // Custom setting and data for chart Doanh thu
+  const [turnoverApex, setTurnoverApex] = useState({
+    series: [45, 37, 18],
+    options: {
+      colors: [
+        "rgba(255, 99, 132, 0.6)",
+        "rgba(54, 162, 235, 0.6)",
+        "rgba(255, 206, 86, 0.6)",
+      ],
+      dataLabels: {
+        textAnchor: "middle",
+        style: {
+          fontSize: "11px",
+          fontFamily: "Helvetica, Arial, sans-serif",
+          fontWeight: "400",
+          // colors: ['#000']
+        },
+      },
+      chart: {
+        width: 380,
+        type: "pie",
+        toolbar: {
+          show: false,
+        },
+        events: {
+          dataPointMouseEnter: function (event) {
+            event.path[0].style.cursor = "pointer";
+          },
+        },
+      },
+      legend: {
+        position: "bottom",
+      },
+      plotOptions: {
+        pie: {
+          horizontal: false,
+          dataLabels: {
+            position: "bottom",
+          },
+        },
+      },
+      labels: label,
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
+    },
+  });
+
+  // Custom setting and data for chart Tốc độ tăng trưởng
+  const [growthApex, setGrowthApex] = useState({
+    series: [
+      {
+        name: "Tốc độ tăng trưởng",
+        data: [20, 30, 20, 50],
+      },
+    ],
+    options: {
+      colors: ["#4D73BE"],
+      chart: {
+        height: 350,
+        type: "line",
+        toolbar: {
+          show: false,
+        },
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      stroke: {
+        curve: "straight",
+      },
+
+      grid: {
+        row: {
+          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          opacity: 0.5,
+        },
+      },
+      xaxis: {
+        categories: ["Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7"],
+      },
+    },
+  });
+
+  // Create Fake data for charts
   const data = [
     {
       brand: logo,
@@ -66,51 +193,12 @@ const ListProductContent = () => {
                 <span>Tổng số lượng bán</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart">
-                <Pie
-                  data={{
-                    labels: ["Miền Bắc", "Miền Trung", "Miền Nam"],
-                    datasets: [
-                      {
-                        label: "# of Votes",
-                        data: [51, 33, 16],
-                        backgroundColor: [
-                          "rgb(169,169,169)",
-                          "rgb(0,0,205)",
-                          "rgb(255,127,80)",
-                        ],
-                        borderWidth: 1,
-                      },
-                    ],
-                  }}
-                  options={{
-                    responsive: true,
-                    plugins: {
-                      datalabels: {
-                        color: "#000",
-                        formatter: (value) => {
-                          return value + "%";
-                        },
-                        font: {
-                          weight: "500",
-                          size: 14,
-                        },
-                      },
-                      legend: {
-                        labels: {
-                          boxWidth: 5,
-                          boxHeight: 5,
-                        },
-                        position: "bottom",
-                      },
-                      title: {
-                        display: false,
-                        text: "Tổng số lượng bán",
-                        font: {
-                          size: 16,
-                        },
-                      },
-                    },
-                  }}
+                <Chart
+                  options={totalApex.options}
+                  series={totalApex.series}
+                  type="pie"
+                  width={300}
+                  // style={{height: '300px'}}
                 />
               </div>
             </div>
@@ -120,59 +208,11 @@ const ListProductContent = () => {
                 <span>Doanh thu</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart">
-                <Pie
-                  data={{
-                    labels: ["Miền Bắc", "Miền Trung", "Miền Nam"],
-                    datasets: [
-                      {
-                        label: "# of Votes",
-                        data: [45, 18, 37],
-                        backgroundColor: [
-                          "rgb(169,169,169)",
-                          "rgb(0,0,205)",
-                          "rgb(255,127,80)",
-                        ],
-                        // borderColor: [
-                        //   "rgba(255, 99, 132, 1)",
-                        //   "rgba(54, 162, 235, 1)",
-                        //   "rgba(255, 206, 86, 1)",
-                        //   "rgba(75, 192, 192, 1)",
-                        //   "rgba(153, 102, 255, 1)",
-                        //   "rgba(255, 159, 64, 1)",
-                        // ],
-                        borderWidth: 1,
-                      },
-                    ],
-                  }}
-                  options={{
-                    responsive: true,
-                    plugins: {
-                      datalabels: {
-                        color: "#000",
-                        formatter: (value) => {
-                          return value + "%";
-                        },
-                        font: {
-                          weight: "500",
-                          size: 14,
-                        },
-                      },
-                      legend: {
-                        labels: {
-                          boxWidth: 5,
-                          boxHeight: 5,
-                        },
-                        position: "bottom",
-                      },
-                      title: {
-                        display: false,
-                        text: "Tổng doanh thu theo miền",
-                        font: {
-                          size: 16,
-                        },
-                      },
-                    },
-                  }}
+                <Chart
+                  options={turnoverApex.options}
+                  series={turnoverApex.series}
+                  type="pie"
+                  width={300}
                 />
               </div>
             </div>
@@ -182,59 +222,12 @@ const ListProductContent = () => {
                 <span>Tốc độ tăng trưởng</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart__linechart">
-                <Line
-                  data={{
-                    labels: ["Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7"],
-                    datasets: [
-                      {
-                        label: "Tốc độ tăng trưởng",
-                        data: [20, 30, 20, 50],
-                        borderColor: "blue",
-                        // backgroundColor: 'rgba(255, 99, 132, 0.5)',
-                        borderWidth: 2,
-                      },
-                    ],
-                  }}
-                  options={{
-                    font: {
-                      size: 7,
-                    },
-                    maintainAspectRatio: false,
-                    responsive: true,
-                    plugins: {
-                      datalabels: {
-                        anchor: "end",
-                        align: "top",
-                        color: "#000",
-                        formatter: (value) => {
-                          return value + "%";
-                        },
-                        font: {
-                          weight: "500",
-                          size: 13,
-                        },
-                      },
-                      legend: {
-                        labels: {
-                          // display: false,
-                          boxWidth: 0,
-                          boxHeight: 0,
-                          font: {
-                            size: 0,
-                          },
-                        },
-                        position: "bottom",
-                        align: "center",
-                      },
-                      title: {
-                        display: false,
-                        text: "Tốc độ tăng trưởng",
-                        font: {
-                          size: 16,
-                        },
-                      },
-                    },
-                  }}
+                <Chart
+                  options={growthApex.options}
+                  series={growthApex.series}
+                  type="line"
+                  height={250}
+                  width={300}
                 />
               </div>
             </div>

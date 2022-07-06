@@ -1,108 +1,86 @@
-import React from "react";
-import { Chart, PointElement } from "chart.js";
-import { Line } from "react-chartjs-2";
-import "chart.js/auto";
-
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from "chart.js";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+import React, { useState } from "react";
+import Chart from "react-apexcharts"
 
 const LineChart = () => {
+
+  const [lineApex, setLineApex] = useState(
+    {
+      series: [{
+        name: 'Văn phòng phẩm',
+        type: 'column',
+        data: [70, 100, 120, 150, 175, 210, 250, 275, 300, 350]
+      }, {
+        name: 'Tỷ trọng doanh thu',
+        type: 'line',
+        data: [300, 350, 375, 400, 420, 450, 475, 600, 625, 700]
+      }],
+      options: {
+        colors: ['#4074B1', '#B02418'],
+        chart: {
+          height: 350,
+          type: 'line',
+          stacked: false,
+          toolbar:{
+            show: false
+          },
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: [1, 1, 4]
+        },
+        title: {
+          text: 'Đơn vị: Tỷ đồng',
+          align: 'center',
+          offsetX: 10,
+          offsetY: 10,
+          style: {
+            fontSize:  '14px',
+            fontWeight:  'bold',
+            fontFamily: 'Helvetica, Arial',
+            color:  '#263238'
+          },
+        },
+        xaxis: {
+          categories: [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+        },
+
+        tooltip: {
+          fixed: {
+            enabled: true,
+            position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+            offsetY: 30,
+            offsetX: 60
+          },
+        },
+        legend: {
+          horizontalAlign: 'left',
+          offsetX: 40,
+          fontSize: '13px',
+          fontFamily: 'Helvetica, Arial',
+          fontWeight: 400,
+        },
+        plotOptions: {
+          bar: {
+            horizontal: false,
+            columnWidth: '40%',
+          },
+          line: {
+            columnWidth: '40%',
+          }
+        },
+      },
+    }
+  )
+
   return (
-    <Line
-      data={{
-        labels: [
-          "2006",
-          "2007",
-          "2008",
-          "2009",
-          "2010",
-          "2011",
-          "2012",
-          "2013",
-          "2014",
-          "2015",
-        ],
-        datasets: [
-          {
-            label: "Dataset 1",
-            data: [200, 250, 320, 360, 400, 425, 450, 520, 600, 700],
-            borderColor: "rgb(255, 99, 132)",
-            backgroundColor: "rgba(255, 99, 132, 0.5)",
-          },
-          {
-            type: "bar",
-            label: "Dataset 2",
-            data: [50, 75, 95, 130, 150, 200, 250, 300, 400, 470],
-            borderColor: "rgb(53, 162, 235)",
-            backgroundColor: "rgba(53, 162, 235, 0.5)",
-          },
-        ],
-      }}
-      options={{
-        scales: {
-          x: {
-            stacked: true,
-            ticks: {
-              font: {
-                size: 20,
-              },
-            },
-          },
-          y: {
-            stacked: true,
-            ticks: {
-              font: {
-                size: 20,
-              },
-            },
-          },
-        },
-        responsive: true,
-        plugins: {
-          datalabels: {
-            display: false,
-          },
-          legend: {
-            // position: 'top' as const,
-            labels: {
-              // display: false,
-              // boxWidth: 0,
-              // boxHeight: 0,
-              font: {
-                size: 20,
-              },
-            },
-            position: "bottom",
-            align: "center",
-          },
-          title: {
-            display: true,
-            text: "Đơn vị: Tỷ đồng",
-            padding: {
-              bottom: 20,
-            },
-            font: {
-              size: 30,
-            },
-          },
-        },
-      }}
+    <Chart 
+      options={lineApex.options}
+      series={lineApex.series}
+      type="line" 
+      width={600}
+      height={350}
     />
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../asset/logo.webp'
+import logo from '../images/logoThienLongOne.png'
 
 const Header = () => {
   return (

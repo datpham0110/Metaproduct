@@ -326,24 +326,39 @@
 
             &__chart{
                 padding: 1rem 0rem 1rem 1rem;
-                height: 80%;
+                height: 75%;
                 display: flex;
                 align-items: center;
                 object-fit: cover;
+                justify-content: center;
+                // padding-right: 1rem;
                 // background-color: red;
+
+                canvas{
+                    // border-right: 1px solid #D9D9D9;
+                    height: 100% !important;
+                    width: 80% !important;
+
+                    &:nth-of-type(3){
+                        border-right: none;
+                    }
+                }
 
                 &__linechart{
                     padding: 1.5rem 1rem 1rem 1rem;
-                    height: 75%;
+                    height: 70%;
                     display: flex;
                     align-items: center;
-                }
+                    justify-content: center;
 
-                canvas{
-                    border-right: 1px solid #D9D9D9;
-
-                    &:nth-of-type(3){
-                        border-left: none;
+                    canvas{
+                        border-right: 1px solid #D9D9D9;
+                        height: 100% !important;
+                        width: 80% !important;
+    
+                        &:nth-of-type(3){
+                            border-right: none;
+                        }
                     }
                 }
             }
