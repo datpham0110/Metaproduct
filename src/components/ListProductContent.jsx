@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import logo from "../images/logo.png";
 import imgproduct from "../images/1.jpg";
-import logotitle from "../images/NewProduct_1.png";
+import logotitle1 from "../images/iconDetails.png";
+import logotitle2 from "../images/iconDetails2.png";
+import logotitle3 from "../images/iconDetails3.png";
 import Chart from "react-apexcharts";
 
 const ListProductContent = () => {
@@ -23,9 +25,17 @@ const ListProductContent = () => {
         style: {
           fontSize: "11px",
           fontFamily: "Helvetica, Arial, sans-serif",
-          fontWeight: "400",
+          fontWeight: "600",
           // colors: ['#000']
         },
+        dropShadow: {
+          enabled: false,
+          top: 1,
+          left: 1,
+          blur: 1,
+          color: '#000',
+          opacity: 0.55
+        }
       },
       chart: {
         width: 380,
@@ -41,6 +51,18 @@ const ListProductContent = () => {
       },
       legend: {
         position: "bottom",
+      },
+      plotOptions: {
+        pie: {
+          startAngle: 0,
+          endAngle: 360,
+          expandOnClick: true,
+          customScale: 1,
+          dataLabels: {
+              offset: -20,
+              minAngleToShowLabel: 10
+          }, 
+        },
       },
       labels: label,
       responsive: [
@@ -69,13 +91,21 @@ const ListProductContent = () => {
         "rgba(255, 206, 86, 0.6)",
       ],
       dataLabels: {
-        textAnchor: "middle",
         style: {
           fontSize: "11px",
           fontFamily: "Helvetica, Arial, sans-serif",
-          fontWeight: "400",
+          fontWeight: "600",
           // colors: ['#000']
         },
+        offsetX: -30,
+        dropShadow: {
+          enabled: false,
+          top: 1,
+          left: 1,
+          blur: 1,
+          color: '#000',
+          opacity: 0.45
+        }
       },
       chart: {
         width: 380,
@@ -94,10 +124,14 @@ const ListProductContent = () => {
       },
       plotOptions: {
         pie: {
-          horizontal: false,
+          startAngle: 0,
+          endAngle: 360,
+          expandOnClick: true,
+          customScale: 1,
           dataLabels: {
-            position: "bottom",
-          },
+              offset: -20,
+              minAngleToShowLabel: 10
+          }, 
         },
       },
       labels: label,
@@ -127,6 +161,18 @@ const ListProductContent = () => {
     ],
     options: {
       colors: ["#4D73BE"],
+      plotOptions: {
+        line: {
+          startAngle: 0,
+          endAngle: 360,
+          expandOnClick: true,
+          customScale: 1,
+          dataLabels: {
+              offset: -20,
+              minAngleToShowLabel: 10
+          }, 
+        },
+      },
       chart: {
         height: 350,
         type: "line",
@@ -135,7 +181,16 @@ const ListProductContent = () => {
         },
       },
       dataLabels: {
-        enabled: false,
+        enabled: true,
+        textAnchor: 'start',
+        // offsetY: -10,
+        // offsetX: -5,
+        formatter: function (val, opts) {
+          return val + '%'
+        },
+        background:{
+          enabled: true
+        }
       },
       stroke: {
         curve: "straight",
@@ -189,7 +244,7 @@ const ListProductContent = () => {
           <div className="listproductcontent__item__detail">
             <div className="listproductcontent__item__detail__card">
               <div className="listproductcontent__item__detail__card__title">
-                <img src={logotitle} alt="" />
+                <img src={logotitle1} alt="" />
                 <span>Tổng số lượng bán</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart">
@@ -204,7 +259,7 @@ const ListProductContent = () => {
             </div>
             <div className="listproductcontent__item__detail__card">
               <div className="listproductcontent__item__detail__card__title">
-                <img src={logotitle} alt="" />
+                <img src={logotitle2} alt="" />
                 <span>Doanh thu</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart">
@@ -218,7 +273,7 @@ const ListProductContent = () => {
             </div>
             <div className="listproductcontent__item__detail__card">
               <div className="listproductcontent__item__detail__card__title">
-                <img src={logotitle} alt="" />
+                <img src={logotitle3} alt="" />
                 <span>Tốc độ tăng trưởng</span>
               </div>
               <div className="listproductcontent__item__detail__card__chart__linechart">

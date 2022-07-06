@@ -55,8 +55,8 @@ const LineChart = () => {
           },
         },
         legend: {
-          horizontalAlign: 'left',
-          offsetX: 40,
+          horizontalAlign: 'center', 
+          offsetY: 5,
           fontSize: '13px',
           fontFamily: 'Helvetica, Arial',
           fontWeight: 400,
