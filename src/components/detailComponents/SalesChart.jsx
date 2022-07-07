@@ -103,7 +103,7 @@ const SalesChart = () => {
           series={saleApex.series}
           type="bar"
           height={175}
-          width={350}
+          width={400}
         />
     </div>
   )
