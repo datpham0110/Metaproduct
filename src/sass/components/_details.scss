@@ -6,13 +6,16 @@
         align-items: center;
         justify-content: space-between;
         gap: 4rem;
+        width: 100%;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid #D9D9D9;
 
     
     }
 }
 
 .revenue{
-    width: 100%;
+    width: 70%;
     display: flex;
     align-items: center;
     gap: 5rem;
@@ -47,10 +50,11 @@
     }
 }
 .infocard{
-    width: 100%;
+    width: 30%;
     padding-top: 3rem;
     border-left: 3px solid #e1e1e1;
     padding-left: 2rem;
+    // width: 60%;
 
     &__content{
         display: flex;
@@ -141,18 +145,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 0rem;
     margin-top: 2rem;
 
-    border-top: 3px solid #D9D9D9;
 }
 
 .trendingcard{
-    width: 72.5%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     border-right: 3px solid #D9D9D9;
     padding-right: 2rem;
+    margin-top: 1rem;
 
     &__bar{
         display: flex;
@@ -161,7 +165,10 @@
         border-bottom: 2px solid #D9D9D9;
 
         h2{
-            
+            font-size: 2.3rem;
+            line-height: 26px;
+            padding: 2rem 0;
+            font-family: 'Eczar', serif;
         }
 
         &__icons{
@@ -231,11 +238,13 @@
 .salechart{
     // width: 100%;
     padding-right: 1rem;
+    width: 30%;
+    width: 27.5%;
 
     &__bar{
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         svg{
             font-size: 1.25rem;
@@ -245,6 +254,17 @@
             display: flex;
             flex-direction: column;
             padding: 2rem 1rem 1rem 1rem;
+
+            h2{
+                font-size: 2.3rem;
+                line-height: 26px;
+                padding: 2rem 0;
+                font-family: 'Eczar', serif;
+            }
+
+            span{
+                font-size: 1.25rem;
+            }
         }
     }
 }
