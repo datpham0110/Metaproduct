@@ -5,6 +5,7 @@ import logotitle1 from "../../images/iconDetails.png";
 import logotitle2 from "../../images/iconDetails2.png";
 import logotitle3 from "../../images/iconDetails3.png";
 import Chart from "react-apexcharts";
+import { Link } from "react-router-dom";
 
 const ListProductContent = () => {
   const label = ["Miền Bắc", "Miền Trung", " Miền Nam"];
@@ -236,11 +237,16 @@ const ListProductContent = () => {
     <div className="listproductcontent">
       {data.map((item, index) => (
         <div className="listproductcontent__item" key={index}>
+        <Link to="detail">
           <div className="listproductcontent__item__info">
-            <img src={item.brand} alt="" />
-            <img src={item.img} alt="" />
-            <p>{item.name}</p>
+            
+              <img src={item.brand} alt="" />
+              
+              <img src={item.img} alt="" />
+              <p>{item.name}</p>
+  
           </div>
+          </Link>
           <div className="listproductcontent__item__detail">
             <div className="listproductcontent__item__detail__card">
               <div className="listproductcontent__item__detail__card__title">
