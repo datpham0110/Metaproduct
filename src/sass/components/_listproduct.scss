@@ -273,7 +273,14 @@
             border-radius: 0.5rem;
             box-shadow: 1px 2px 0px #D9D9D9;
             border-right: none;
+            height: 100%;
 
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+            }
             img{
                 cursor: pointer;
             }
@@ -283,7 +290,7 @@
                 opacity: 0.8;
             }
             img:nth-of-type(2){
-                width: 90%;
+                width: 100%;
             }
 
             p{
