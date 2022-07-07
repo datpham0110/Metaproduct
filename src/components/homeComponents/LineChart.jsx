@@ -3,6 +3,7 @@ import Chart from "react-apexcharts"
 
 const LineChart = () => {
 
+  //Custom setting and data for chart: Tỷ trọng doanh thu theo từng năm
   const [lineApex, setLineApex] = useState(
     {
       series: [{

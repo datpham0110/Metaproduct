@@ -5,6 +5,7 @@ import "chart.js/auto";
 
 const CircleChart = () => {
 
+  //Custom setting and data for Chat: Tỷ lệ các ngành
   const [donutApex, setDonutApex] = useState(
     {
       series: [55, 27, 9, 9],

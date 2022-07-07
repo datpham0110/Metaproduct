@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import logo from "../images/logo.png";
-import imgproduct from "../images/1.jpg";
-import logotitle1 from "../images/iconDetails.png";
-import logotitle2 from "../images/iconDetails2.png";
-import logotitle3 from "../images/iconDetails3.png";
+import logo from "../../images/logo.png";
+import imgproduct from "../../images/1.jpg";
+import logotitle1 from "../../images/iconDetails.png";
+import logotitle2 from "../../images/iconDetails2.png";
+import logotitle3 from "../../images/iconDetails3.png";
 import Chart from "react-apexcharts";
 
 const ListProductContent = () => {
   const label = ["Miền Bắc", "Miền Trung", " Miền Nam"];
 
-  // Custom setting and dâta for chart Tổng số lượng bán
+  // Custom setting and dâta for chart: Tổng số lượng bán
   const [totalApex, setTotalApex] = useState({
     series: [51, 33, 16],
     options: {
@@ -81,7 +81,7 @@ const ListProductContent = () => {
     },
   });
 
-  // Custom setting and data for chart Doanh thu
+  // Custom setting and data for chart: Doanh thu
   const [turnoverApex, setTurnoverApex] = useState({
     series: [45, 37, 18],
     options: {
@@ -151,7 +151,7 @@ const ListProductContent = () => {
     },
   });
 
-  // Custom setting and data for chart Tốc độ tăng trưởng
+  // Custom setting and data for chart: Tốc độ tăng trưởng
   const [growthApex, setGrowthApex] = useState({
     series: [
       {

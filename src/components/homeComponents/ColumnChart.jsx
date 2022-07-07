@@ -4,6 +4,7 @@ import Chart from "react-apexcharts"
 
 const ColumnChart = () => {
 
+  //Custom setting and data for chart: Doanh thu theo nhóm ngành
   const [columnApex, setColumnApex] = useState(
     {
       series: [{
