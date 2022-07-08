@@ -25,6 +25,7 @@ const ColumnChart = () => {
         data: [21, 7, 25, 13, 22]
       }],
       options: {
+
         colors: ['#4074B1', '#B02418', '#5E803F', '#F9D978', '#C1D0E8'],
         chart: { 
           type: 'bar',
@@ -81,13 +82,22 @@ const ColumnChart = () => {
           ],
         },
         legend: {
-          // position: 'right',
-          // offsetY: 40,
           show: true,
           position: 'bottom',
           fontSize: '13px',
           fontFamily: 'Helvetica, Arial',
           fontWeight: 400,
+          markers: {
+          width: 12,
+          height: 12,
+          strokeColor: '#fff',
+          radius: 12,
+          },
+          horizontalAlign: 'left', 
+          itemMargin: {
+            horizontal: 55,
+            vertical: 5
+          },
           
         },
         fill: {

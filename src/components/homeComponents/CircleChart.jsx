@@ -18,6 +18,10 @@ const CircleChart = () => {
             }
           },
         },
+        legend:{
+          offsetY: 35,
+          enabled: false
+        },
         labels: [
           'Bút viết 664', 
           'Dụng cụ văn phòng 332', 
