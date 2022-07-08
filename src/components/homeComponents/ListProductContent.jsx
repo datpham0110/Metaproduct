@@ -180,6 +180,9 @@ const ListProductContent = () => {
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        }
       },
       dataLabels: {
         enabled: true,
