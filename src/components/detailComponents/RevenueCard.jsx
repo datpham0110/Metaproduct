@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
+import { TbSortDescending } from 'react-icons/tb'
+import { GrSchedules } from 'react-icons/gr'
 
 const RevenueCard = () => {
 
@@ -25,6 +27,9 @@ const RevenueCard = () => {
         toolbar: {
           show: false,
         },
+        zoom: {
+          enabled: false,
+        }
       },
       stroke: {
         curve: "straight",
@@ -126,12 +131,24 @@ const RevenueCard = () => {
         ))}
       </div>
       <div className="revenue__chart">
+        <div className="revenue__chart__group">
+          <div className="revenue__chart__group__title">
+             
+                <h2>Net sales</h2>
+                <strong>/</strong>
+                <span>Nov 22, 2021 - Nov 28, 2021</span>
+          </div>
+          <div className="revenue__chart__group__icons">
+                <TbSortDescending />
+                <GrSchedules />
+              </div>
+        </div>
         <Chart
           options={mixedApex.options}
           series={mixedApex.series}
           type="area"
           height={350}
-          width={800}
+          width={750}
         />
       </div>
     </div>
