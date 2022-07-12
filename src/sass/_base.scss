@@ -62,7 +62,6 @@ canvas {
     .apexcharts-legend {
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      gap: 0rem;
       padding-top: 0rem;
       overflow: hidden;
 
@@ -116,9 +115,9 @@ canvas {
     justify-content: center;
     padding: 1rem;
 
-    .apexcharts-legend{
-        display: flex;
-        justify-content: center;
+    .apexcharts-legend {
+      display: flex;
+      justify-content: center;
     }
 
     &__chart {
@@ -127,8 +126,6 @@ canvas {
       align-items: center;
       justify-content: center;
       object-fit: fill;
-
-      
     }
   }
 }

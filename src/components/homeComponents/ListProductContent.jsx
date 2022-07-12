@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../images/logo.png";
-import imgproduct from "../../images/1.jpg";
+import imgproduct from "../../images/butbithienlong.png";
 import logotitle1 from "../../images/iconDetails.png";
 import logotitle2 from "../../images/iconDetails2.png";
 import logotitle3 from "../../images/iconDetails3.png";
@@ -34,9 +34,9 @@ const ListProductContent = () => {
           top: 1,
           left: 1,
           blur: 1,
-          color: '#000',
-          opacity: 0.55
-        }
+          color: "#000",
+          opacity: 0.55,
+        },
       },
       chart: {
         width: 380,
@@ -60,9 +60,9 @@ const ListProductContent = () => {
           expandOnClick: true,
           customScale: 1,
           dataLabels: {
-              offset: -20,
-              minAngleToShowLabel: 10
-          }, 
+            offset: -20,
+            minAngleToShowLabel: 10,
+          },
         },
       },
       labels: label,
@@ -104,9 +104,9 @@ const ListProductContent = () => {
           top: 1,
           left: 1,
           blur: 1,
-          color: '#000',
-          opacity: 0.45
-        }
+          color: "#000",
+          opacity: 0.45,
+        },
       },
       chart: {
         width: 380,
@@ -130,9 +130,9 @@ const ListProductContent = () => {
           expandOnClick: true,
           customScale: 1,
           dataLabels: {
-              offset: -20,
-              minAngleToShowLabel: 10
-          }, 
+            offset: -20,
+            minAngleToShowLabel: 10,
+          },
         },
       },
       labels: label,
@@ -169,9 +169,9 @@ const ListProductContent = () => {
           expandOnClick: true,
           customScale: 1,
           dataLabels: {
-              offset: -20,
-              minAngleToShowLabel: 10
-          }, 
+            offset: -20,
+            minAngleToShowLabel: 10,
+          },
         },
       },
       chart: {
@@ -182,19 +182,19 @@ const ListProductContent = () => {
         },
         zoom: {
           enabled: false,
-        }
+        },
       },
       dataLabels: {
         enabled: true,
-        textAnchor: 'start',
+        textAnchor: "start",
         // offsetY: -10,
         // offsetX: -5,
         formatter: function (val, opts) {
-          return val + '%'
+          return val + "%";
         },
-        background:{
-          enabled: true
-        }
+        background: {
+          enabled: true,
+        },
       },
       stroke: {
         curve: "straight",
@@ -240,15 +240,13 @@ const ListProductContent = () => {
     <div className="listproductcontent">
       {data.map((item, index) => (
         <div className="listproductcontent__item" key={index}>
-        <Link to="detail">
-          <div className="listproductcontent__item__info">
-            
+          <Link to="detail">
+            <div className="listproductcontent__item__info">
               <img src={item.brand} alt="" />
-              
+
               <img src={item.img} alt="" />
               <p>{item.name}</p>
-  
-          </div>
+            </div>
           </Link>
           <div className="listproductcontent__item__detail">
             <div className="listproductcontent__item__detail__card">

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-import { TbSortDescending } from 'react-icons/tb'
-import { GrSchedules } from 'react-icons/gr'
+import { TbSortDescending } from "react-icons/tb";
+import { GrSchedules } from "react-icons/gr";
 
 const RevenueCard = () => {
-
   // Custom setting and data for Char: Mixed Doanh thu
   const [mixedApex, setMixedApex] = useState({
     series: [
@@ -29,7 +28,7 @@ const RevenueCard = () => {
         },
         zoom: {
           enabled: false,
-        }
+        },
       },
       stroke: {
         curve: "straight",
@@ -46,8 +45,8 @@ const RevenueCard = () => {
       markers: {
         size: 0,
       },
-      legend:{
-        show: false
+      legend: {
+        show: false,
       },
       yaxis: [
         {
@@ -133,15 +132,14 @@ const RevenueCard = () => {
       <div className="revenue__chart">
         <div className="revenue__chart__group">
           <div className="revenue__chart__group__title">
-             
-                <h2>Net sales</h2>
-                <strong>/</strong>
-                <span>Nov 22, 2021 - Nov 28, 2021</span>
+            <h2>Net sales</h2>
+            <strong>/</strong>
+            <span>Nov 22, 2021 - Nov 28, 2021</span>
           </div>
           <div className="revenue__chart__group__icons">
-                <TbSortDescending />
-                <GrSchedules />
-              </div>
+            <TbSortDescending />
+            <GrSchedules />
+          </div>
         </div>
         <Chart
           options={mixedApex.options}
