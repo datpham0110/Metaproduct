@@ -1,0 +1,42 @@
+.navbar {
+  width: 20%;
+  background-color: #f5f8fb;
+  height: 100%;
+  padding: 1rem;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 2px solid $borderColor;
+    padding-bottom: 1rem;
+    gap: 1rem;
+
+    img {
+      width: 25%;
+    }
+  }
+
+  &__content {
+    margin-top: 1rem;
+
+    &__item {
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid $borderColor;
+      font-size: 1.15rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color: #e1e1e1, $alpha: 0.3);
+      }
+
+      .active {
+        border-right: 2px solid $mainColor;
+      }
+    }
+  }
+}

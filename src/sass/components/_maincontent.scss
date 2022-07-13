@@ -1,0 +1,173 @@
+.main {
+  width: 80%;
+  height: 100%;
+  background-color: #f2f2f2;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    background-color: #fff;
+    box-shadow: $boxShadow;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      span {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &__bar {
+        background-color: #f5f3f7;
+        display: flex;
+        align-items: center;
+        padding: 0.65rem 1rem;
+        border-radius: 0.5rem;
+        margin-right: 1.5rem;
+
+        svg {
+          font-size: 1.3rem;
+          background-color: transparent;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &__enter {
+          background-color: #fff;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          display: flex;
+          gap: 0.25rem;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          padding-left: 1rem;
+          font-weight: 500;
+          font-size: 1rem;
+        }
+      }
+
+      &__icons {
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        gap: 1rem;
+
+        svg {
+          margin-right: 0.5rem;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    &__btns {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 500;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        box-shadow: $boxShadow;
+        cursor: pointer;
+
+        svg {
+          font-size: 1.15rem;
+        }
+      }
+    }
+
+    &__info {
+    }
+  }
+}
+
+.ReactModal__Content {
+  inset: 15rem !important;
+  position: absolute !important;
+  top: 20px !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #e1e1e1 !important;
+  box-shadow: $boxShadow !important;
+  // overflow: hidden !important;
+  transition: all 0.5s ease-in-out;
+
+  input {
+    font-size: 1.15rem;
+    outline: none;
+    padding: 0.75rem 1rem;
+    border: 1.75px solid $borderColor;
+    border-radius: 0.5rem;
+
+    &:focus {
+      border: 1.75px solid #1f66af;
+    }
+  }
+
+  .formfield {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    &__list {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      overflow: hidden;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .information {
+          height: 52vh;
+        }
+      }
+    }
+  }
+}
+
+// Custom button upload for Upload Antd
+.ant-upload.ant-upload-select-picture-card {
+  // height: 10vh !important;
+}
